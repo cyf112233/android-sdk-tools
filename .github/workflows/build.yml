@@ -38,6 +38,12 @@ jobs:
       run: |
         python3 get_source.py --tags android-16.0.0_r4
 
+    - name: Initialize protobuf submodules
+      run: |
+        cd src/protobuf
+        git submodule init
+        git submodule update --depth 1 --recursive
+    
     - name: Build protobuf (host)
       run: |
         cd src/protobuf
