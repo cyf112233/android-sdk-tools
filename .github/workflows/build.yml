@@ -3,7 +3,7 @@ name: Build Android SDK Tools
 on:
   push:
     tags:
-      - 'v*'
+      - '*'
 
 jobs:
   build:
