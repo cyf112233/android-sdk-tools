@@ -52,15 +52,6 @@ jobs:
           --abi=${{ matrix.abi }} \
           --build=build/${{ matrix.abi }} \
           --protoc=${PROTOC}
-
-    - name: Build SDK tools
-      run: |
-        PROTOC=$(realpath src/protobuf/build/protoc)
-        python3 build.py \
-          --ndk=$(realpath android-ndk) \
-          --abi=${{ matrix.abi }} \
-          --build=build/${{ matrix.abi }} \
-          --protoc=${PROTOC}
         cd build/${{ matrix.abi }}/bin
         zip -r ../android-sdk-tools-static-aarch64.zip * 
 
