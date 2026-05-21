@@ -41,12 +41,15 @@ jobs:
     - name: Build protobuf (host)
       run: |
         cd src/protobuf
-        mkdir build && cd build
+        mkdir -p build && cd build
         cmake -GNinja \
+          -DCMAKE_BUILD_TYPE=Release \
           -Dprotobuf_BUILD_TESTS=OFF \
+          -Dprotobuf_BUILD_SHARED_LIBS=OFF \
           -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
-          ../cmake
+          ..
         ninja -j$(nproc)
+        ls -l protoc
 
     - name: Build SDK tools
       run: |
