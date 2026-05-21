@@ -38,6 +38,16 @@ jobs:
       run: |
         python3 get_source.py --tags android-16.0.0_r4
 
+    - name: Create symlinks for CMake compatibility
+      run: |
+        cd src
+        ln -sf core/libprocessgroup libprocessgroup 2>/dev/null || true
+        ln -sf core/libcutils libcutils 2>/dev/null || true
+        ln -sf core/libutils libutils 2>/dev/null || true
+        ln -sf core/libusbhost libusbhost 2>/dev/null || true
+        ln -sf logging/liblog liblog 2>/dev/null || true
+        echo "Symlinks created"
+    
     - name: Download prebuilt protoc
       run: |
         curl -L -o protoc.zip https://github.com/protocolbuffers/protobuf/releases/download/v25.8/protoc-25.8-linux-x86_64.zip
