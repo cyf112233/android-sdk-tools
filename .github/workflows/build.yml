@@ -36,7 +36,7 @@ jobs:
 
     - name: Fetch AOSP sources
       run: |
-        python3 get_source.py --tags platform-tools-${{ env.PLATFORM_VERSION }}
+        python3 get_source.py --tags android-16.0.0_r4
 
     - name: Build protobuf (host)
       run: |
