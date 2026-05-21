@@ -154,5 +154,37 @@
     {
         "path": "src/soong",
         "url": "https://android.googlesource.com/platform/build/soong"
+    },
+    {
+        "path": "src/libprocessgroup",
+        "url": "https://android.googlesource.com/platform/system/core/libprocessgroup"
+    },
+    {
+        "path": "src/libcutils",
+        "url": "https://android.googlesource.com/platform/system/libcutils"
+    },
+    {
+        "path": "src/libutils",
+        "url": "https://android.googlesource.com/platform/system/libutils"
+    },
+    {
+        "path": "src/libusbhost",
+        "url": "https://android.googlesource.com/platform/system/libusbhost"
+    },
+    {
+        "path": "src/libcrypto_utils",
+        "url": "https://android.googlesource.com/platform/system/libcrypto_utils"
+    },
+    {
+        "path": "src/libnativehelper",
+        "url": "https://android.googlesource.com/platform/libnativehelper"
+    },
+    {
+        "path": "src/compiler-rt",
+        "url": "https://android.googlesource.com/platform/external/compiler-rt"
+    },
+    {
+        "path": "src/liblog",
+        "url": "https://android.googlesource.com/platform/system/logging/liblog"
     }
 ]
